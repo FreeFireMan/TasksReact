@@ -2,6 +2,7 @@ import React from "react";
 import '../App.css';
 import {useSelector} from "react-redux";
 
+
 export default function Result() {
     const result = useSelector((store) => store.result.result);
 

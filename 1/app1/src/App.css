@@ -41,12 +41,21 @@ h1 {
 }
 
 .reset {
-    margin: 0 230px;
+    margin: 0 auto;
     height: 40px;
-    width: 100px;
+    width: 150px;
 }
 
 .bottom-box {
     text-align: center;
     margin-top: 50px;
+}
+.submit-box{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+input{
+    height: 30px;
+    margin-right: 20px;
 }

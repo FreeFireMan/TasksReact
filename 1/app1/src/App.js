@@ -1,9 +1,9 @@
-import Calculator from "./components/Calculator";
+import Result from "./components/Result";
 
 export default function App (){
     return (
         <div className='app-box'>
-<Calculator/>
+<Result/>
         </div>
     );
 }

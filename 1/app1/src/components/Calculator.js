@@ -21,9 +21,11 @@ export default function Calculator() {
     return (
         <div className='main-calc-box'>
             <h1>Calculator</h1>
+            {/*todo зробити компоненту резалт*/}
             <div className='result'>
                 {count}
             </div>
+            {/*todo зробити компоненту батонс*/}
             <div className="calculations-box">
                 <button className='calc-btn' onClick={calculationHandler} value='1'>+1</button>
                 <button className='calc-btn' onClick={calculationHandler}>-1</button>
@@ -31,12 +33,14 @@ export default function Calculator() {
                 <button className='calc-btn' onClick={calculationHandler}>-100</button>
             </div>
             <button className='reset' onClick={calculationHandler}>RESET</button>
+
+            {/*todo зробити компоненту інпут*/}
             <div className='bottom-box'>
+                {/*//todo зробити контрольований инпут, позбавитись форми*/}
                 <form action="" onSubmit={onSubmitHandler}>
                     <input type="number"/>
                     <button className="submit-btn">SUBMIT</button>
                 </form>
-
 
             </div>
         </div>

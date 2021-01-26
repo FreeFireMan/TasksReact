@@ -1,9 +1,9 @@
 import Calculator from "./components/Calculator";
 
-export default function App (){
+export default function App() {
     return (
         <div className='app-box'>
-<Calculator/>
+            <Calculator/>
         </div>
     );
 }

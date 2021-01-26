@@ -6,9 +6,7 @@ export default function Buttons({setCount, btns}) {
     const calculationHandler = (event) => {
         const value = +event.target.innerText
         if (event.target.innerText === 'RESET') setCount(0);
-        for (const item of btns) {
-            if (value === item) setCount(prev => prev + item <= 0 ? prev = 0 : prev += item)
-        }
+        else setCount(res => res + value <= 0 ? res = 0 : res += value);
     }
 
     return (

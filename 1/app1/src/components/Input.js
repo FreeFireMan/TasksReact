@@ -1,11 +1,10 @@
 import React from "react";
 import '../App.css';
 
-
 export default function Input({setCount}) {
     const inputRef = React.createRef();
 
-    const onSubmitHandler = (e) => {
+    const onSubmitHandler = () => {
         setCount(prev => prev + +inputRef.current.value)
     }
 

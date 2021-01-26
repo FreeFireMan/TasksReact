@@ -50,12 +50,14 @@ h1 {
     text-align: center;
     margin-top: 50px;
 }
-.submit-box{
+
+.submit-box {
     margin-top: 20px;
     display: flex;
     justify-content: center;
 }
-input{
+
+input {
     height: 30px;
     margin-right: 20px;
 }

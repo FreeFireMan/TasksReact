@@ -1,6 +1,4 @@
-import React, {useState} from "react";
-import Buttons from "./Buttons";
-import Input from "./Input";
+import React from "react";
 import '../App.css';
 
 export default function Result({count}) {

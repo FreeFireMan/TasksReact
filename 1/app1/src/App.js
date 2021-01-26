@@ -5,7 +5,7 @@ import React, {useState} from "react";
 
 export default function App() {
     const [count, setCount] = useState(0);
-    const buttons = [1, -1, 100, -100]
+    const buttons = [1, -1, 100, -100, 50, -50]
     return (
         <div className='app-box'>
             <Result count={count}/>

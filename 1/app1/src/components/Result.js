@@ -3,6 +3,7 @@ import Buttons from "./Buttons";
 import Input from "./Input";
 import '../App.css';
 
+
 export default function Result() {
     const [count, setCount] = useState(0);
 

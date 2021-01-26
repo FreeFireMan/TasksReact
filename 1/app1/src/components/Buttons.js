@@ -2,7 +2,7 @@ import React from "react";
 import '../App.css';
 
 export default function Buttons({setCount}) {
-//
+
     const calculationHandler = (event) => {
         const value = event.target.innerText;
         if (value === '+1') setCount(prev => prev + 1)

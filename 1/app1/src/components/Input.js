@@ -4,7 +4,7 @@ import '../App.css';
 export default function Input({setCount}) {
     const inputRef = React.createRef();
 
-    
+
     const onSubmitHandler = () => {
         setCount(prev => prev + +inputRef.current.value)
     }

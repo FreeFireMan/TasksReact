@@ -1,15 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import '../App.css';
 
-export default function Input({onSubmitHandler}) {
+export default function Input({calculationHandler}) {
     //todo позбавитися рефа і зробити контрольований інпут
-    const inputRef = React.createRef();
 
-
+    const [inputValue, setInputValue] = useState(0);
+    console.log(inputValue);
     return (
         <div className='submit-box'>
-            <input type="number" name='inp' ref={inputRef}/>
-            <button className="submit-btn" onClick={() => onSubmitHandler(inputRef)}>SUBMIT</button>
+            <input type="number" name='inp' onChange={(e) => setInputValue(+(e.target.value))} value={inputValue}/>
+            <button className="submit-btn" onClick={() => calculationHandler(inputValue)}>SUBMIT</button>
         </div>
     );
 }

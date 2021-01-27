@@ -7,20 +7,18 @@ export default function App() {
 
     const [count, setCount] = useState(0);
     const buttons = [1, -1, 100, -100, 50, -50]
-        //todo ці два метода об'єднати у один
-    const onSubmitHandler = (ref) => {
-        setCount(prev => prev + +ref.current.value)
+
+    const calculationHandler = (inp, el) => {
+        if (inp > 0) setCount(prev => prev + inp);
+        else if (el) setCount(res => res + el <= 0 ? res = 0 : res += el);
+        else setCount(0);
     }
-    const calculationHandler = (event) => {
-        const value = +event.target.innerText
-        if (event.target.innerText === 'RESET') setCount(0);
-        else setCount(res => res + value <= 0 ? res = 0 : res += value);
-    }
+
     return (
         <div className='app-box'>
             <Result count={count}/>
             <Buttons setCount={setCount} btns={buttons} calculationHandler={calculationHandler}/>
-            <Input setCount={setCount} onSubmitHandler={onSubmitHandler}/>
+            <Input setCount={setCount} calculationHandler={calculationHandler}/>
         </div>
     );
 }

@@ -1,81 +1,52 @@
-.main-calc-box {
+.app-box{
+    display: flex;
+    flex-direction: column;
     background-color: saddlebrown;
-    width: 40vw;
-    height: 70vh;
+align-items: center;
+    max-width: 600px;
     margin: 100px auto;
     border-radius: 10px;
+    height: 400px;
+    padding-top: 50px;
 }
-
-.app-box {
-    position: relative;
+.main-calc-box{
+    margin-top:10px;
+    text-align: center;
+    min-width: 400px;
+}
+.calculations-box{
+    margin-top: 10px;
     display: flex;
-    height: 100vh;
-    background-color: silver;
-}
-
-h1 {
-    text-align: center;
-}
-
-.result {
-    border: 1px solid black;
     max-width: 400px;
-    height: 30px;
-    margin: 0 auto;
-    background-color: grey;
-    text-align: center;
-    font-size: 22px;
-}
-
-.calc-btn {
-    height: 40px;
-    width: 120px;
-    margin-left: 60px;
+    flex-wrap: wrap;
+    height: 150px;
     margin-bottom: 10px;
 }
-
-.calculations-box {
-position: absolute;
-top:250px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 420px;
-    left: 333px;
-}
-
-.reset {
-    margin: 0 auto;
+.calc-btn,.reset{
+    width: 130px;
     height: 40px;
-    width: 150px;
+    padding: 10px;
+    align-items: center;
+margin: 5px auto;
 }
-
-.bottom-box {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.submit-box {
-
+.submit-box{
     display: flex;
-    justify-content: center;
+    min-width: 400px;
+    justify-content: space-around;
 }
-
-input {
-    height: 30px;
-    margin-right: 20px;
+.submit-btn{
+    width: 130px;
+    height: 40px;
+    justify-content: space-around;
+    margin-bottom: 100px;
 }
-.submit-btn {
-    height: 34px;
-    width: 70px;
+input{
+    height: 40px;
 }
-
-
-
-
-
-
-
-
-
-
-
+.result{
+    background-color: silver;
+    padding: 20px;
+}
+.reset{
+    margin-top: 10px;
+}

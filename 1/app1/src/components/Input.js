@@ -1,19 +1,14 @@
 import React from "react";
 import '../App.css';
 
-export default function Input({setCount}) {
+export default function Input({onSubmitHandler}) {
     const inputRef = React.createRef();
 
-
-    const onSubmitHandler = () => {
-        //todo up this b. logic in parent component
-        setCount(prev => prev + +inputRef.current.value)
-    }
 
     return (
         <div className='submit-box'>
             <input type="number" name='inp' ref={inputRef}/>
-            <button className="submit-btn" onClick={onSubmitHandler}>SUBMIT</button>
+            <button className="submit-btn" onClick={() => onSubmitHandler(inputRef)}>SUBMIT</button>
         </div>
     );
 }

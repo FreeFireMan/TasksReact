@@ -7,7 +7,7 @@ export default function App() {
 
     const [count, setCount] = useState(0);
     const buttons = [1, -1, 100, -100, 50, -50]
-
+        //todo ці два метода об'єднати у один
     const onSubmitHandler = (ref) => {
         setCount(prev => prev + +ref.current.value)
     }

@@ -2,6 +2,7 @@ import React from "react";
 import '../App.css';
 
 export default function Input({onSubmitHandler}) {
+    //todo позбавитися рефа і зробити контрольований інпут
     const inputRef = React.createRef();
 
 

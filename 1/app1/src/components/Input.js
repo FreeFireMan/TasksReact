@@ -6,6 +6,7 @@ export default function Input({setCount}) {
 
 
     const onSubmitHandler = () => {
+        //todo up this b. logic in parent component
         setCount(prev => prev + +inputRef.current.value)
     }
 

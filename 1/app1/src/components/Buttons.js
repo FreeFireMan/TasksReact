@@ -4,6 +4,7 @@ import '../App.css';
 export default function Buttons({setCount, btns}) {
 
     const calculationHandler = (event) => {
+        //todo up this b. logic in parent component
         const value = +event.target.innerText
         if (event.target.innerText === 'RESET') setCount(0);
         else setCount(res => res + value <= 0 ? res = 0 : res += value);

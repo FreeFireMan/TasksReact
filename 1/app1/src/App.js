@@ -3,7 +3,7 @@ import Buttons from "./components/Buttons";
 import Input from "./components/Input";
 import React, {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
-import {ADD_BUTTONS} from "./redux/action-types";
+import {ADD_BUTTONS, ADD_RESULT, RESET} from "./redux/action-types";
 
 export default function App() {
 
@@ -16,8 +16,8 @@ export default function App() {
 
     const calculationHandler = (el) => {
         el === 'reset'
-            ? setCount(0)
-            : setCount(res => res + el <= 0 ? res = 0 : res += el);
+            ? dispatch({type: RESET, payload: 0})
+            : dispatch({type: ADD_RESULT, payload: el})
     }
 
     return (

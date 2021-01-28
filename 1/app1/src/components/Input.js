@@ -4,6 +4,7 @@ import '../App.css';
 export default function Input({calculationHandler}) {
 
     const [inputValue, setInputValue] = useState(0);
+
     return (
         <div className='submit-box'>
             <input

@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 
 export default function Buttons({calculationHandler}) {
 
-    const buttons = useSelector((store) => store.buttons);
+    const buttons = useSelector((store) => store.buttons.buttons);
 
     const btnHandler = (value) => {
         calculationHandler(value)

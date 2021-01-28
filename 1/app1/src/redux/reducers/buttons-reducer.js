@@ -1,7 +1,7 @@
 import {ADD_BUTTONS} from "../action-types";
 
 const initialState = {
-    buttons: []
+    buttons: [1, -1, 100, -100, 50, -50]
 }
 
 export const buttonsReducer = (state = initialState, action) => {

@@ -1,9 +1,12 @@
 import React, {useState} from "react";
 import '../App.css';
+import {useDispatch} from "react-redux";
+import {ADD_RESULT} from "../redux/action-types";
 
-export default function Input({calculationHandler}) {
+export default function Input() {
 
-    const [inputValue, setInputValue] = useState(0);
+    const dispatch = useDispatch();
+    const [payload, setPayload] = useState(0);
 
     return (
         <div className='submit-box'>
@@ -11,12 +14,12 @@ export default function Input({calculationHandler}) {
                 type="number"
                 name='inp'
                 onChange={({target: {value}}) =>
-                    setInputValue(+value)} value={inputValue}
+                    setPayload(+value)} value={payload}
             />
             <button
                 className="submit-btn"
                 onClick={() =>
-                    calculationHandler(inputValue)}
+                    dispatch({type: ADD_RESULT, payload})}
             >SUBMIT
             </button>
         </div>

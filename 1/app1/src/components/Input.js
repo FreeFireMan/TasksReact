@@ -20,3 +20,6 @@ export default function Input({calculationHandler}) {
         </div>
     );
 }
+
+
+

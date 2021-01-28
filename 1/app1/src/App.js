@@ -24,7 +24,7 @@ export default function App() {
         <div className='app-box'>
             <Result count={count}/>
             <Buttons calculationHandler={calculationHandler}/>
-            <Input setCount={setCount} calculationHandler={calculationHandler}/>
+            <Input calculationHandler={calculationHandler}/>
         </div>
     );
 }

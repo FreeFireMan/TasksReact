@@ -9,14 +9,15 @@ export default function Input({calculationHandler}) {
             <input
                 type="number"
                 name='inp'
-                onChange={({target:{value}}) =>
+                onChange={({target: {value}}) =>
                     setInputValue(+value)} value={inputValue}
             />
             <button
                 className="submit-btn"
                 onClick={() =>
                     calculationHandler(inputValue)}
-            >SUBMIT</button>
+            >SUBMIT
+            </button>
         </div>
     );
 }

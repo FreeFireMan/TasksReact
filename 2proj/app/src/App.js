@@ -1,13 +1,8 @@
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
 import UserList from "./components/User/UserList";
-import UserItem from "./components/User/UserItem";
 import FullUser from "./components/User/FullUser";
 import Edit from "./components/User/Edit";
+import CreateUser from "./components/User/CreateUser";
 
 
 export default function App() {
@@ -28,6 +23,11 @@ export default function App() {
                 <Route  path="/users/info">
                     <UserList/>
                     <FullUser/>
+                    <Route path='/users/info/edit' component={Edit}/>
+                </Route>
+                <Route path='/users/create'>
+                    <UserList/>
+                    <CreateUser/>
                 </Route>
             </Switch>
         </div>

@@ -1,5 +1,4 @@
-import {ADD_USERS_FROM_API, ADD_CHOSEN_USER,DELETE_CHOSEN_USER} from "../action-types";
-import {act} from "@testing-library/react";
+import {ADD_CHOSEN_USER, ADD_USERS_FROM_API, CREATE_USER, DELETE_CHOSEN_USER, SAVE_USERS_LIST} from "../action-types";
 
 
 const initialState = {
@@ -10,16 +9,23 @@ const initialState = {
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_USERS_FROM_API: {
-            return {...initialState, users: action.payload}
+            return {...state, users: action.payload}
         }
         case ADD_CHOSEN_USER: {
-            const chosenUser = state.users.filter(user => user.id === action.payload);
-            return {...state, chosenUser}
+            return {...state, chosenUser: action.payload}
         }
         case DELETE_CHOSEN_USER: {
-            console.log(action.payload,'delete');
             const withDeleted = state.users.filter(user => user.id !== action.payload);
             return {...state, users: withDeleted}
+        }
+        case SAVE_USERS_LIST: {
+            return {...state, users: action.payload}
+        }
+        case CREATE_USER: {
+            console.log(action.payload);
+            state.users.push(action.payload)
+            console.log(state)
+            return state;
         }
         default: {
             return state;

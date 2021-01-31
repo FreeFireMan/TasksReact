@@ -10,17 +10,14 @@ export default function App() {
 
     return (
         <div className="d-flex col-12 mt-5">
+
             <Link to="/users">
                 <button type="button" className="btn btn-secondary w-100">USERS</button>
             </Link>
 
             <Switch>
-
-                <Route exact path="/users">
-                    <UserList/>
-                </Route>
-
-                <Route  path="/users/info">
+                <Route exact path="/users" component={UserList}/>
+                <Route path="/users/info">
                     <UserList/>
                     <FullUser/>
                     <Route path='/users/info/edit' component={Edit}/>
